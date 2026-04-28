@@ -21,7 +21,7 @@ pipeline {
                 )]){
                     sh "docker login -u ${env.dockerHubuser} -p{env.dockerHubPass}"
                     sh "docker image tag ${env.dockerHubuser}/flask-app:latest"
-                    sh "docker push ${env.dockerHubuser}/flask-app:latest"
+                    sh "docker push ${env.dockerHubuser}/flask-app-cicd:latest"
                 }
             }
         }
